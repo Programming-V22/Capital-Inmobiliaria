@@ -1,0 +1,6 @@
+.dfondo {
+    filter:alpha(opacity=20);
+    -moz-opacity:0.2;
+    opacity: 0.2;
+
+ }

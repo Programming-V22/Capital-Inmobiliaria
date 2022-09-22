@@ -1,0 +1,25 @@
+/*Vertical bar*/
+
+.barra_icones {
+    width: 90px;
+    background-color: orange;
+}
+
+div.barra_icones a{
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;/*para efeitos hover*/
+    color: white;
+    font-size: 36px;
+}
+
+div.barra_icones a:hover{
+    background-color: white;
+    color: orange;
+}
+
+div.barra_icones a.ativo {
+    background-color: white;
+    color: orange;
+}

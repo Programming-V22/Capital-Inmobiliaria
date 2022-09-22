@@ -1,0 +1,33 @@
+/* archivo que da estilo a anuncio.html */
+
+h1{
+    margin-bottom: 2rem;
+}
+
+.icono-main .precio{
+    margin-left: 20%;
+    margin-top: 5rem;
+}
+
+.iconos-caracteristicas{
+    margin-right: 20%;
+    margin-top: 5rem;
+}
+
+
+/** Anuncio **/
+@media only screen and (min-width: 768px) {
+    .par{
+        margin: 60px 10px 60px 20%;
+        font-size: 1.8rem;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .par{
+        margin: 60px 10px 60px 6%;
+        font-size: 1.8rem;
+
+    }
+}

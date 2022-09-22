@@ -1,0 +1,20 @@
+DELIMITER $$ -- CAMBIANDO EL DELIMITADOR POR "$$"
+DROP PROCEDURE IF EXISTS `Mlista_client` $$
+CREATE PROCEDURE `Mlista_client`()
+BEGIN
+    DECLARE _IDINMUEBLE INT;
+    DECLARE _NOMBREINMUEBLE VARCHAR(250);
+    DECLARE _NOMBRECLIENTE VARCHAR(250);
+	DECLARE _TELEFONOCLIENTE INT;
+    DECLARE _NOMBREFECHA DATE;
+
+    SET _IDINMUEBLE = (SELECT id from lista_visitas WHERE id=id GROUP BY id);        
+    SET _NOMBREINMUEBLE = (select titulo from inmuebles WHERE id=id GROUP BY id);
+    SET _NOMBRECLIENTE = (SELECT nombre from clientes WHERE id=id GROUP BY id);
+    SET _TELEFONOCLIENTE = (select telefono from clientes WHERE id=id GROUP BY id);
+    SET _NOMBREFECHA = (SELECT fecha_visita from lista_visitas WHERE id=id GROUP BY id);
+
+    SELECT _IDINMUEBLE as idinmuebl, _NOMBREINMUEBLE AS nombreinmuebl, _NOMBRECLIENTE as nombreclient, TELEFONOCLIENTE as telefonoclient, _NOMBREFECHA as nombrefecha;
+    -- MÚLTIPLES SENTENCIAS DEL PROCEDIMIENTO ALMACENADO SEPARADAS POR ";"
+END$$
+DELIMITER ; -- EL DELIMITADOR VUELVE A SER ";"

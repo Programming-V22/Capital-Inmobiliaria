@@ -1,0 +1,83 @@
+/* archivo que da estilos a nosotros.html */
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+}
+
+b{
+    font-style: italic;
+    font-size: 2rem;
+}
+
+
+img{
+    margin-top: 5rem;
+    max-width: 100%;
+
+
+}
+
+
+h1{
+    margin-top: 8rem;
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .texto-nosotros p{
+        width: 445px;
+        height: 308px ;
+        overflow: hidden;
+    }
+}
+@media only screen and (min-width: 768px) {
+
+    .contenido-nosotros {
+        display: grid;
+        margin-top: 4rem;
+        margin-left: 8rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .texto-nosotros p{
+        width: 353px;
+        height: 233px ;
+        overflow: hidden;
+    }
+
+    .contenido-nosotros {
+        display: grid;
+        margin-top: 4rem;
+        /* margin-left: 2rem; */
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+
+    .texto-nosotros p{
+        width: 162px;
+        height: 158px ;
+        overflow: hidden;
+    }
+}
+
+
+@media only screen and (max-width: 361px) {
+
+    .texto-nosotros p{
+        height: 90px;
+        overflow: hidden;
+    }
+
+}
